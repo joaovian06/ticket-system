@@ -1,0 +1,8 @@
+h2 Atendant
+
+= link_to '+', new_atendant_path, class: 'btn btn-success'
+
+.row.atendants
+  - @atendants.each do |atendant|
+    .col-4
+      = render 'atendant', atendant:

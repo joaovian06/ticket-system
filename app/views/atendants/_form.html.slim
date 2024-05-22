@@ -1,0 +1,31 @@
+/ <%= form_with(model: atendant) do |form| %>
+/   <% if atendant.errors.any? %>
+/     <div style="color: red">
+/       <h2><%= pluralize(atendant.errors.count, "error") %> prohibited this atendant from being saved:</h2>
+
+/       <ul>
+/         <% atendant.errors.each do |error| %>
+/           <li><%= error.full_message %></li>
+/         <% end %>
+/       </ul>
+/     </div>
+/   <% end %>
+
+/   <div>
+/     <%= form.label :name, style: "display: block" %>
+/     <%= form.text_field :name %>
+/   </div>
+
+/   <div>
+/     <%= form.submit %>
+/   </div>
+/ <% end %>
+
+= form_with model: atendant do |form|
+  .card.p-4.my-4
+    .row
+      .col-12
+        .input-group.mb-3
+          .input-group-text#addon1 @
+          = form.text_field :name, class: 'form-control', placeholder: 'Name'
+        input class='btn btn-primary' type='submit' name='commit' value='Create Atendant' data-disable-with='Create Atendant'
