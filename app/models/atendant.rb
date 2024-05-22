@@ -1,0 +1,2 @@
+class Atendant < ApplicationRecord
+end

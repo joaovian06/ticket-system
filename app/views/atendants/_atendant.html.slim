@@ -1,0 +1,11 @@
+div id="#{dom_id atendant}"
+  .card.my-5
+    .card-header
+      .card-title
+        strong
+          = atendant.name
+
+    .card-body.d-flex.justify-content-between
+      = link_to 'Show', atendant, class: 'btn btn-primary'
+      = link_to 'Edit', edit_atendant_path(atendant), class: 'btn btn-warning'
+      = button_to 'Destroy', atendant, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
