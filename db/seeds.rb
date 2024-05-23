@@ -8,8 +8,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-names = %w[joao pedro ricardo roberto julio otavio]
+atendant_names = %w[joao pedro ricardo roberto julio otavio]
 
-names.each do |name|
+atendant_names.each do |name|
   Atendant.create(name:)
+  Client.create(name:)
 end

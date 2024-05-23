@@ -1,14 +1,16 @@
-= form_with(model: client) do |form|
-  - if client.errors.any?
-    div style="color: red"
-      h2 = "#{pluralize(client.errors.count, "error")} prohibited this client from being saved:"
-      ul
-        - client.errors.each do |error|
-          li = error.full_message
-
-  div
-    = form.label :name, style: "display: block"
-    = form.text_field :name
-
-  div
-    = form.submit
+= form_with model: client do |form|
+  .card.p-4.my-4
+    - if client.errors.any?
+      div style="color: red"
+        h2
+          = "#{pluralize(client.errors.count, 'error')} prohibited this client from being saved:"
+        ul
+          - client.errors.each do |error|
+            li = error.full_message
+    .row
+      .col-12
+        .input-group.mb-3
+          .input-group-text#addon1 @
+          = form.text_field :name, class: 'form-control', placeholder: 'Name'
+        input class
+          ='btn btn-primary' type='submit' name='commit' value='Create client' data-disable-with='Create client'
