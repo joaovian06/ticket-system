@@ -13,5 +13,8 @@ html
       'type': 'module'
 
   body
+    = render 'shared/navbar'
     .container-lg.mt-4
+      p style="color: green" = notice
+
       = yield

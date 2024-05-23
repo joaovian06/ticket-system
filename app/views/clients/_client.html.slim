@@ -1,0 +1,11 @@
+div id="#{dom_id client}"
+  .card.my-5
+    .card-header
+      .card-title
+        strong
+          = client.name
+
+    .card-body.d-flex.justify-content-between
+      = link_to 'Show', client, class: 'btn btn-primary'
+      = link_to 'Edit', edit_client_path(client), class: 'btn btn-warning'
+      = button_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

@@ -1,0 +1,12 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    a.navbar-brand[href="#"]
+      | Navbar
+    button.navbar-toggler[type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"]
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item.text-white
+          = link_to 'Clients', clients_path, class: 'nav-link'
+        li.nav-item.text-white
+          = link_to 'Atendants', atendants_path, class: 'nav-link'

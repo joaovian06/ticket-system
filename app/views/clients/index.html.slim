@@ -1,0 +1,8 @@
+h2 Clients
+
+= link_to '+', new_client_path, class: 'btn btn-success'
+
+.row.clients
+  - @clients.each do |client|
+    .col-4
+      = render 'client', client:
